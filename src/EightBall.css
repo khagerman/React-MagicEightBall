@@ -3,7 +3,6 @@
   width: 200px;
   background-color: black;
   border-radius: 50%;
-
   text-align: center;
   color: cornsilk;
   font-size: 20px;
@@ -15,4 +14,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.EightBall-button {
+  text-align: center;
 }

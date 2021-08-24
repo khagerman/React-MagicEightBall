@@ -10,19 +10,28 @@ function EightBall({ answers }) {
   //   const [randomChoice, setChoice] = useState(choice(answers));
   const [color, setColor] = useState("black");
   const [msg, setMsg] = useState("Think of a Question");
+  const restart = () => {
+    setColor("black");
+    setMsg("Think of a Question");
+  };
   let clicked = () => {
     let pickedFortune = choice(answers);
     setColor(pickedFortune.color);
     setMsg(pickedFortune.msg);
   };
   return (
-    <div
-      className="EightBall"
-      onClick={clicked}
-      style={{ backgroundColor: color }}
-    >
-      <h3> {msg} </h3>
-    </div>
+    <>
+      <div
+        className="EightBall"
+        onClick={clicked}
+        style={{ backgroundColor: color }}
+      >
+        <h3> {msg} </h3>
+      </div>
+      <div className="EightBall-button">
+        <button onClick={restart}>Reset</button>
+      </div>
+    </>
   );
 }
 export default EightBall;
